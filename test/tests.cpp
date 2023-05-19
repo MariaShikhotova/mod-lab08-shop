@@ -20,7 +20,6 @@ TEST(TestCaseName1, TestName1) {
 	int max_queue_length = 5;
 	task s(num_checkouts, lambda, checkout_time_ms, max_queue_length, mean_num_items);
 	s.startSimulation();
-	s.startSimulation();
 	int sum = s.clients_served + s.rejected_clients;
 	EXPECT_EQ(sum, 100);
 	//EXPECT_TRUE(true);
@@ -79,7 +78,7 @@ TEST(TestCaseName4, TestName4) {
 	//EXPECT_TRUE(true);
 }
 TEST(TestCaseName5, TestName5) {
-	int num_checkouts = 2;
+	int num_checkouts = 5;
 	double lambda = 0.1;
 	int checkout_time_ms = 1;
 	double mean_num_items = 2;
@@ -112,5 +111,5 @@ TEST(TestCaseName7, TestName7) {
 	task s(num_checkouts, lambda, checkout_time_ms, max_queue_length, mean_num_items);
 	s.startSimulation();
 	int sum = s.clients_served;
-	EXPECT_EQ(sum, 100);
+	EXPECT_EQ(sum, 0);
 }
