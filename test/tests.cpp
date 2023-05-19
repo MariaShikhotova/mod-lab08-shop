@@ -81,8 +81,8 @@ TEST(TestCaseName5, TestName5) {
 	int num_checkouts = 5;
 	double lambda = 0.1;
 	int checkout_time_ms = 1;
-	double mean_num_items = 2;
-	int max_queue_length = 7;
+	double mean_num_items = 1;
+	int max_queue_length = 50;
 	task s(num_checkouts, lambda, checkout_time_ms, max_queue_length, mean_num_items);
 	s.startSimulation();
 	
